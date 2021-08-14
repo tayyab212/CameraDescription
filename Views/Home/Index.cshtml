@@ -1,5 +1,5 @@
-﻿
-@model List<CameraDesription.Models.CameraDetail>
+﻿@model List<CameraDesription.Models.CameraDetail>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -105,13 +105,13 @@
         }
     </style>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-    
 </head>
 
 <body>
     @{
         int counter = 0;
+
+
     }
     <h1>Security cameras Utrecht</h1>
     <div id="map"></div>
@@ -122,105 +122,105 @@
     <main>
         <table id="cameraTableContainer">
             <tbody>
-
-
-                @foreach (var item in Model)
-                {
-                    counter++;
                 <tr>
-                    if (counter % 3  == 0 && counter % 5 != 0)
-                    {
-
                     <td>
                         <table id="column3">
                             <thead>
                                 <tr>
                                     <th colspan="4">Cameras 3</th>
                                 </tr>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.Index % 3 ==0 && item.Index % 5 !=0)
+                                    {
 
-                                <tr>
-
-
-                                    <th>Number</th>
-                                    <th>@item.Name</th>
-                                    <th>@item.Latitude</th>
-                                    <th>@item.Longitude</th>
-
-
-                                </tr>
-
+                                        <tr>
+                                            <th>@item.Index</th>
+                                            <th>@item.Name</th>
+                                            <th>@item.Latitude</th>
+                                            <th>@item.Longitude</th>
+                                        </tr>
+                                    }
+                                }
                             </thead>
                             <tbody>
                             </tbody>
                         </table>
                     </td>
-                    }
-                    else if (counter % 5 == 0 && counter % 3 != 0)
-                    {
                     <td>
                         <table id="column5">
                             <thead>
                                 <tr>
-                                    <th colspan="4">Cameras 5 &amp; 5</th>
+                                    <th colspan="4">Cameras 5</th>
                                 </tr>
-                                <tr>
-                                    <th>Number</th>
-                                    <th>Name</th>
-                                    <th>Latitude</th>
-                                    <th>Longitude</th>
-                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.Index % 5 == 0 && item.Index % 3 != 0)
+                                    {
+
+                                        <tr>
+                                            <th>@item.Index</th>
+                                            <th>@item.Name</th>
+                                            <th>@item.Latitude</th>
+                                            <th>@item.Longitude</th>
+                                        </tr>
+                                    }
+                                }
                             </thead>
                             <tbody>
                             </tbody>
                         </table>
                     </td>
-                    }
-                    else if (counter % 3 == 0 && counter % 5 == 0)
-                    {
                     <td>
                         <table id="column15">
                             <thead>
                                 <tr>
-                                    <th colspan="4">Cameras 3</th>
+                                    <th colspan="4">Cameras 3 &amp; 5</th>
                                 </tr>
-                                <tr>
-                                    <th>Number</th>
-                                    <th>Name</th>
-                                    <th>Latitude</th>
-                                    <th>Longitude</th>
-                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.Index % 3 == 0 && item.Index % 5 == 0)
+                                    {
+
+                                        <tr>
+                                            <th>@item.Index</th>
+                                            <th>@item.Name</th>
+                                            <th>@item.Latitude</th>
+                                            <th>@item.Longitude</th>
+                                        </tr>
+                                    }
+                                }
                             </thead>
                             <tbody>
                             </tbody>
                         </table>
                     </td>
-                    }
-                    else if (counter % 3 != 0 && counter % 5 != 0)
-                    {
                     <td>
                         <table id="columnOther">
                             <thead>
                                 <tr>
                                     <th colspan="4">Cameras Overig</th>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.Index % 3 != 0 && item.Index % 5 != 0)
+                                    {
 
-                                </tr>
-                                <tr>
-                                    <th>Number</th>
-                                    <th>Name</th>
-                                    <th>Latitude</th>
-                                    <th>Longitude</th>
-                                </tr>
+                                        <tr>
+                                            <th>@item.Index</th>
+                                            <th>@item.Name</th>
+                                            <th>@item.Latitude</th>
+                                            <th>@item.Longitude</th>
+                                        </tr>
+                                    }
+                                }
                             </thead>
                             <tbody>
                             </tbody>
                         </table>
                     </td>
-                    }
-
                 </tr>
-                        }
-                   
-                </tbody>
+            </tbody>
         </table>
     </main>
 </body>

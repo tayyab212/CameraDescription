@@ -11,6 +11,7 @@ namespace CameraDesription.Models
         public string Name { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
+        public int Index { get; set; }
     }
 
     public class CameraDetailList
