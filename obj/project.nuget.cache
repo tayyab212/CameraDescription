@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "L0lt7A4wY5bja0GWTAqumbJSyYU5ctZSKTlxGbv6x5h/bcB4dPvXswkgX4y0cdSAT+A7FhbK+ogtnQp61VT3Aw==",
+  "success": true,
+  "projectFilePath": "D:\\Personal Projects\\CameraDesription\\CameraDesription.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ttahir\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
